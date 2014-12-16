@@ -1,4 +1,6 @@
 // https://github.com/peter-murray/node-hue-api
+// http://stackoverflow.com/questions/3894048/what-is-the-best-way-to-initialize-a-javascript-date-to-midnight
+// todo read the second answer regarding nearest midnight, this will probably give problems
 
 var SunCalc = require('suncalc');
 var hue = require("node-hue-api"),
