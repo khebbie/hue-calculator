@@ -59,13 +59,7 @@ else{
 
 // --------------------------
 // Using a promise
-api.setLightState(5, state)
+api.setLightState(2, state)
 .then(displayResult)
 .done();
 
-// --------------------------
-// Using a callback
-api.setLightState(2, state, function(err, lights) {
-  if (err) throw err;
-  displayResult(lights);
-});
