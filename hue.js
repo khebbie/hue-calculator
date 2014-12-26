@@ -13,10 +13,17 @@ function getMidnight(){
   return d;
 }
 
+function getNextMidnight(){
+  var d = new Date();
+  d.setHours(23, 59, 0,0);
+  return d;
+}
+
 function isNight(times, now){
   var midnight = getMidnight();
+  var nextMidnight = getNextMidnight();
   if(now > midnight && now < times.dawn){return true;}
-  if(now < times.dusk && now< midnight ){return true;}
+  if(now > times.dusk && now< nextMidnight ){return true;}
   return false;
 }
 
